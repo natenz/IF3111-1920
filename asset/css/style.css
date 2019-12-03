@@ -64,3 +64,32 @@ form {
     height: 300px;
     margin: 20px auto;
 }
+
+.styled-select {
+    width: 220px;
+    height: 30px;
+    overflow: hidden;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+}
+
+.styled-select select {
+    width: 220px;
+    padding: 9px;
+    font-size: 12px;
+    line-height: 1;
+    border: 0;
+    border-radius: 0;
+    height: 34px;
+}
+
+/**/
+.styled-file {
+    width: 70px;
+    height: 30px;
+    overflow: hidden;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+}
