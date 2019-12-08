@@ -33,14 +33,17 @@
             <div class="styled-select">
                 <select>
                     <option value="">Pilih Aspek Pelaporan/Komentar</option>
-                    <option value="">Administrasi</option>
-                    <option value="">Badan Usaha Milik Desa(BUMD)</option>
+                    <option value="dosen">Dosen</option>
+                    <option value="staff">Staff</option>
+                    <option value="mhs">Mahasiswa</option>
+                    <option value="infra">Infrastruktur</option>
+                    <option value="ajar">Pengajaran</option>
                 </select>
 
             </div><br>
-            <div class="styled-file">
-                <input type="file" name="file" style="height: 35px; width:75px;">
-            </div><br>
+
+            <input type="file" name="file" value="Choose File" style="height: 35px; width:75px;">
+
             <input type="submit" name="Buat" value="Buat Lapor" style="float: right; width: 85px; height: 35px;"><br>
             <br><br>
             <hr>
