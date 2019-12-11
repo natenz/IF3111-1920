@@ -5,6 +5,9 @@ body {
 .header {
     padding: 5px;
     font-family: sans-serif;
+    width: 960;
+    height:150;
+    background-image: url('..asset/img/header.jpg');
 }
 
 form {
