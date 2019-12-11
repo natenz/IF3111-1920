@@ -125,3 +125,12 @@ footer  {
 footer #copyright {
     text-align: center;
 }
+
+body #komen .li {
+    text-align: inherit;
+    text-decoration: ivory;
+    
+    float: center;
+    padding: 5px 5px ;
+
+}
