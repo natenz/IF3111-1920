@@ -1,0 +1,11 @@
+body{
+ background-image:url(/asset/img/it.jpg);
+}
+.transparent{
+ background:rgba(2, 2, 2, 0.5);
+ width: 50%;
+ height:350px;
+ padding:10px;
+ margin:0px auto;
+ color:#fff;
+}
