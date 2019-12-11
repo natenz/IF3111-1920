@@ -2,25 +2,29 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>Lapor| Institut Teknologi SUmatera</title>	
+        <title>Lapor| Institut Teknologi Sumatera</title>	
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>assets/css/style.css">
 </head> 
 <div class="header">
                 <div id="content">               
                 <button class="button">
-                    <a href="Tentang.html">Tentang Lapor</a>  
+                    <a href="tampilan1.php">Tentang Lapor</a>  
                 </button>
                 <button class="button">
-                    <a href="traveling.html">Masuk</a>  
+                    <a href="login.php">Masuk</a>  
                 </button>
                 <button class="button">
-                    <a href="food.html">Lapor</a>  
+                    <a href="tampilan2.php">Lapor</a>  
                 </button>
                 <button class="button">
-                    <a href="Tampilan1.php">Cari Aduan</a>  
+                    <a href="Tampilan3.php">Cari Aduan</a>  
                 </button>
                 </div>
     </div> 
+<div class="content">
+
+</div>
+
     <div class="footer">
          <h4>Download Aplikasi Lapor ITERA </h4>
          <img class="foto" src="playstore.jpg" height="80px" width= "70px" align ="left" border="2"/>
