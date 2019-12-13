@@ -1,0 +1,75 @@
+<?php
+require 'function.php';
+$commentar = query ("SELECT * FROM tugasbesarweb");
+
+if ( isset ($_POST["cariSearch"])){
+    $komentar = cariSearch($_POST["keyword"])
+
+}
+
+
+
+?>
+
+<html>
+    <head>
+        <title> Laporan ! LAPOR! </title>
+        <link rel="stylesheet" type="text/css" href=styleSearch.css>
+
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                <div id="menukiri">
+                  
+
+                </div>
+                <nav>
+                    <ul>
+                        <li class="active"><a href="#" > Tentang Lapor! </a></li>
+                        <li> <a href="#"> Laporan </a></li>
+                        <li> <a href="menuSearch.html"> Cari Aduan </a></li>
+                    
+                    </ul>
+                </nav>
+                <div id="menukanan">
+                    <nav>
+                        <ul>
+                            <li>
+                                <li> <a href="#"> Masuk </a></li> 
+                                <li> <a href="#"> Daftar </a></li>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+
+        </header>
+
+        <form action="" method="post">
+        <div class="container">
+            <div id="search">
+                <textarea name="comment" id="search" rows="2" cols="65" class="form-control textarea-flex autosize" placeholder="Cari Laporan" autocomplete="" > </textarea>
+                <button type="submit" name="cariSearch">Cari Laporan ! </button>
+            </div>
+        </form>
+        </div>
+
+        <section id="showcoment">
+            <div class="container">
+                <?php while ($row = mysqli_fetch_assoc($result)): ?>
+                <p>
+                    <?= $row["komentar"]; ?>
+                    <h4>
+                    <?= $row["jenis"]; ?>
+                    </h4>
+                    <?= $row["upload"]; ?>
+                    <?= $row["date"]; ?>
+                </p>
+                
+            </div> 
+
+        </section>
+        <?php endwhile; ?>
+    </body>
+        </html>
