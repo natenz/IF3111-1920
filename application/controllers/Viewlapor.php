@@ -31,7 +31,22 @@ class Viewlapor extends CI_Controller
         }
     }
 
-    public function ubah($idkom){
-        $update =
+    public function ubah($idkom)
+    {
+        $this->load->model('Lapor_model');
+        $data = array(
+            'komentar' => $this->input->post('komentar'),
+            'lampiran' => $this->input->post('lampiran'),
+            'waktu' => date('Y-m-d 00:00:00', strtotime($this->input->post('waktu'))),
+            'aspek' => $this->input->post('aspek'),
+        );
+
+        if ($this->input->post('ubah')) {
+            if ($this->Lapor_model->validation("update")) {
+                $this->Lapor_model->ubah($idkom);
+                redirect('komentar');
+            }
+        }
+        $this->load->view('layout', $data);
     }
 }
