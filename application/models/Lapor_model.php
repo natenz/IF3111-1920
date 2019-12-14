@@ -11,6 +11,24 @@ class Lapor_model extends CI_Model
     {
         $this->db->select('*');
         $this->db->from('komentar');
-        $this->db->where('id_comment', '$idkom');
+        $this->db->where('id_comment', $idkom);
+        $data = $this->db->get();
+        return $data->result_array();
+    }
+
+    public function hapus($idkom)
+    {
+        $this->db->select('*');
+        $this->db->from('komentar');
+        $this->db->where('id_comment', $idkom);
+        $this->db->delete('komentar');
+    }
+
+    public function ubah($idkom)
+    {
+        $this->db->select('*');
+        $this->db->from('komentar');
+        $this->db->where('id_comment', $idkom);
+        $this->db->update('komentar');
     }
 }
