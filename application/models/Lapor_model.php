@@ -13,4 +13,14 @@ class Lapor_model extends CI_Model
         $this->db->from('komentar');
         $this->db->where('id_comment', '$idkom');
     }
+    public function ambil(){
+        return $this->db->get('keyword');
+    }
+    public function get_cari($keyword){
+        $cari=$this->input->GET('cari',TRUE);
+        $data2=$this->db->query("SELECT*from komentar where komentar like '%cari '");
+        return $data2->lapor();
+        
+    }
+        
 }
