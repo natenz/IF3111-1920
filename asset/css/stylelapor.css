@@ -1,0 +1,158 @@
+html,
+body {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	width: 100%;
+	background-size: cover;
+}
+
+.intro {
+	margin: auto;
+	padding: 0;
+	height: 100%;
+	width: 100%;
+	font-size: 15px;
+	font-family: sans-serif;
+	background-color: white;
+	background-image: url(potolapor.png) no-repeat 50% 50%;
+
+}
+
+.container {
+	width: 80%;
+	margin: auto;
+	overflow: hidden;
+
+}
+
+
+header {
+	background: #ec1063;
+	padding-top: 30px;
+	min-height: 50px;
+	border-bottom: 5px hotpink solid;
+}
+
+header #menukiri {
+	float: left;
+}
+
+header #menukanan {
+	float: right;
+}
+
+header li {
+	float: left;
+	display: inline;
+
+	padding: 0 20px 0 20px;
+}
+
+header a {
+	color: white;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 15px;
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+}
+
+header #menukiri,
+header #menukanan,
+.active a {
+	color: #fff;
+	font-weight: bold;
+}
+
+header a:hover {
+	color: #960083;
+	font-weight: bold;
+
+}
+
+body #komen {
+	background: white;
+	box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
+	font-variant-position: super;
+	font-display: inherit;
+	font-display: flex;
+	font-size: 25pt;
+	position: relative;
+	max-width: 550px;
+	padding: 50px;
+
+}
+
+body #komen #kateg {
+	padding: 5px;
+	position: static;
+	width: 131px;
+	height: 500px;
+
+
+}
+
+body #sidebar {
+	float: right;
+	color: blue;
+	display: inline;
+}
+
+.container .wrap .sidebar .instansi {
+	float: right;
+	margin-top: 0;
+	box-shadow: 10px 5px 15px rgba(0, 0, 0, .5);
+	font-display: inherit;
+	font-display: flex;
+	font-size: 10pt;
+
+}
+
+.container .wrap .sidebar .kisah {
+	float: right-bottom;
+	margin-top: 5px;
+	box-shadow: 10px 5px 15px rgba(0, 0, 0, .5);
+	font-size: 10pt;
+
+}
+
+#spons {
+	margin-top: 20px;
+	width: 1500px;
+	height: 250px;
+
+}
+
+#spons .box {
+	float: left;
+	text-align: center;
+	width: 30%;
+	padding: 10px;
+}
+
+#footer {
+	width: 1500px;
+	height: 250px;
+	background: linear-gradient(to-right, grey, white);
+	background-color: grey;
+	margin: 2px 3px 0 3px;
+
+}
+
+footer #copyright {
+
+	text-align: center;
+}
+
+body #komen .li {
+	text-align: inherit;
+	text-decoration: ivory;
+
+	float: center;
+	padding: 5px 5px;
+
+}
