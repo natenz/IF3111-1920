@@ -1,39 +1,25 @@
 <?php
 class Lapor_model extends CI_Model
 {
-    public function tambah($data)
-    {
-        $this->db->insert('komentar', $data);
-    }
-
     public function tampil_lapor()
     {
-        $data = $this->db->query("SELECT * FROM `komentar` ORDER BY `komentar`.`id_comment` ASC");
-        return $data->result_array();
+        $query= $this->db->query("SELECT * FROM komentar ORDER BY id_comment ASC")->result_array();
+        return $query;
     }
 
     public function tampil_lengkap($idkom)
     {
         $this->db->select('*');
         $this->db->from('komentar');
-        $this->db->where('id_comment', $idkom);
-        $data = $this->db->get();
-        return $data->result_array();
+        $this->db->where('id_comment', '$idkom');
     }
 
-    public function hapus($idkom)
-    {
-        $this->db->select('*');
-        $this->db->from('komentar');
-        $this->db->where('id_comment', $idkom);
-        $this->db->delete('komentar');
+    public function get_cari($keyword){
+        $cari=$this->input->GET('cari',TRUE);
+        $data2=$this->db->query("SELECT*from komentar where komentar like '%cari '");
+        return $data2->lapor();
+        
     }
-
-    public function ubah($data, $idkom)
-    {
-        $this->db->select('*');
-        $this->db->from('komentar');
-        $this->db->where('id_comment', $idkom);
-        $this->db->update('komentar', $data);
-    }
+    
+        
 }
