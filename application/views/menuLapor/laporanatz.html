@@ -1,17 +1,18 @@
 <?php
 require 'function.php';
+$commentar = query ("SELECT * FROM tugasbesarweb");
 
 
     if(isset ($_POST["submit"])){
         if(tambah($_POST) > 0 ){
             echo " <script >
                 alert('Komentar anda telah ditambahkan !');
-                document.location.href = ' ';
+                document.location.href = '';
             </script>"
         }else {
             echo " <script >
                     alert('Komentar gagal diterima !');
-                    document.location.href = ' ';
+                    document.location.href = '';
                 </script>"
         }
     }
@@ -19,7 +20,7 @@ require 'function.php';
 
     
 
-?>
+?> 
 <!DOCTYPE html>
 <html>
     <head>
@@ -61,14 +62,14 @@ require 'function.php';
             <div class="wrap">
             <nav id="komen">
                 <form method="POST" action="">
-                    <textarea name="comment" id="comment" rows="5" cols="70" class="form-control textarea-flex autosize" placeholder="Ketik laporan Anda..."> </textarea>
+                     
                 </form>
                 <div id="kateg">
                 <select  id="jenis" name="jenis" placeholder="Pilih Kategori" value="">
                     <option value="">-- Pilih Kategori --</option>
-                    <option value="admonline"> Administrasi Online </option>
-                    <option value="adm"> Administrasi Online </option>
-                    <option value="almtcab"> Alamat Cabang </option>    
+                    <option value="1"> Rusak </option>
+                    <option value="2"> Gedung </option>
+                    <option value="3"> Jalan </option>    
                 </select>
                      </div>
                 <nav id="inp">
@@ -85,7 +86,7 @@ require 'function.php';
                         <div class="instansi">
                             <h2> Instansi Terhangat </h2>
                             <p>Tim Sosialisasi KKS</p>  
-                            <p>Tim Sosialisasi KKS</p>  
+                            <p>Tim Sosialisasi Tubes</p>  
                         </div>
                         </aside>
                 
@@ -95,13 +96,20 @@ require 'function.php';
 
         <section id="showcoment">
             <div class="container">
-                <h1>
-                    TAMPILAN COMMENT COMMENT !
-                </h1>
+                <?php while ($row = mysqli_fetch_assoc($result)): ?>
+                <p>
+                    <?= $row["komentar"]; ?>
+                    <h4>
+                    <?= $row["jenis"]; ?>
+                    </h4>
+                    <?= $row["upload"]; ?>
+                    <?= $row["date"]; ?>
+                </p>
                 
             </div> 
 
         </section>
+        <?php endwhile; ?>
         <footer>
             <section id="spons">
                 <div class="container">
