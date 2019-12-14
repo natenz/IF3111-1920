@@ -1,0 +1,140 @@
+<?php
+require 'function.php';
+
+
+    if(isset ($_POST["submit"])){
+        if(tambah($_POST) > 0 ){
+            echo " <script >
+                alert('Komentar anda telah ditambahkan !');
+                document.location.href = ' ';
+            </script>"
+        }else {
+            echo " <script >
+                    alert('Komentar gagal diterima !');
+                    document.location.href = ' ';
+                </script>"
+        }
+    }
+      
+
+    
+
+?>
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Laporan ! LAPOR! </title>
+        <link rel="stylesheet" type="text/css" href=stylelapor.css>
+
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                <div id="menukiri">
+                  
+
+                </div>
+                <nav>
+                    <ul>
+                        <li class="active"><a href="#" > Tentang Lapor! </a></li>
+                        <li> <a href="#"> Laporan </a></li>
+                        <li> <a href="#"> Cari Aduan </a></li>
+                    
+                    </ul>
+                </nav>
+                <div id="menukanan">
+                    <nav>
+                        <ul>
+                            <li>
+                                <li> <a href="#"> Masuk </a></li> 
+                                <li> <a href="#"> Daftar </a></li>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            
+
+        </header>
+        <br><br><br><br><br><br><br><br>
+        <div class="container">
+            <div class="wrap">
+            <nav id="komen">
+                <form method="POST" action="">
+                    <textarea name="comment" id="comment" rows="5" cols="70" class="form-control textarea-flex autosize" placeholder="Ketik laporan Anda..."> </textarea>
+                </form>
+                <div id="kateg">
+                <select  id="jenis" name="jenis" placeholder="Pilih Kategori" value="">
+                    <option value="">-- Pilih Kategori --</option>
+                    <option value="admonline"> Administrasi Online </option>
+                    <option value="adm"> Administrasi Online </option>
+                    <option value="almtcab"> Alamat Cabang </option>    
+                </select>
+                     </div>
+                <nav id="inp">
+                <input type="file" name="upload" value="" placeholder="Max File 2MB" />
+                 </nav>
+                 <ul>
+                     <button type="submit" name="submit" > Tambah Komentar!
+
+                     </button>
+                    </ul>
+              
+                </nav>  
+                <aside class="sidebar">
+                        <div class="instansi">
+                            <h2> Instansi Terhangat </h2>
+                            <p>Tim Sosialisasi KKS</p>  
+                            <p>Tim Sosialisasi KKS</p>  
+                        </div>
+                        </aside>
+                
+            </div>          
+        </div>
+        
+
+        <section id="showcoment">
+            <div class="container">
+                <h1>
+                    TAMPILAN COMMENT COMMENT !
+                </h1>
+                
+            </div> 
+
+        </section>
+        <footer>
+            <section id="spons">
+                <div class="container">
+                    <div class="box">
+                        <p>Download Aplikasi Mobile LAPOR!</p>
+                        <img src="google-play.png" width="150">
+    
+                    </div>
+                    <div class="box">
+                            <p>Dikembangkan Oleh : </p>
+                            <img src="logl.png" width="90" >
+                            
+        
+                     </div>
+                    <div class="box">
+                            <p>Lebih Dekat dengan Kami!</p>
+                            <img src="Instagram.png" width="49" >
+                            <img src="Facebook.png" width="52">
+        
+                        </div>
+                   
+                </div>
+            </section>
+            <p id="copyright" > Copyright  @2019</p>
+    
+        </footer>               
+           
+          
+  
+
+        
+    </body>
+
+        
+
+</html>
