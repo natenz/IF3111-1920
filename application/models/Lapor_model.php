@@ -1,6 +1,11 @@
 <?php
 class Lapor_model extends CI_Model
 {
+    public function tambah($data)
+    {
+        $this->db->insert('komentar', $data);
+    }
+
     public function tampil_lapor()
     {
         $data = $this->db->query("SELECT * FROM `komentar` ORDER BY `komentar`.`id_comment` ASC");
@@ -24,11 +29,11 @@ class Lapor_model extends CI_Model
         $this->db->delete('komentar');
     }
 
-    public function ubah($idkom)
+    public function ubah($data, $idkom)
     {
         $this->db->select('*');
         $this->db->from('komentar');
         $this->db->where('id_comment', $idkom);
-        $this->db->update('komentar');
+        $this->db->update('komentar', $data);
     }
 }
