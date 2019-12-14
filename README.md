@@ -10,6 +10,7 @@ di program studi teknik informatika ITERA.
 
 ### Anggota Tim :cyclone:
 Project dikerjakan secara **berkelompok** dengan maksimal jumlah anggota adalah 2-3 orang mahasiswa.
+Anggota Kelompok: Gusti Made Andrian Putradinata/14117054, Nurma Yunita Sari/14117085, Nur Anggraheni/141170088
 
 ### Petunjuk Pengerjaan :umbrella:
 1. Fork pada repository ini dengan akun github anda.
@@ -18,9 +19,17 @@ contoh: fix css, membuat post done, jangan seperti final, benerin dikit, oke deh
 Disarankan untuk tidak melakukan commit dengan perubahan yang besar karena akan mempengaruhi 
 penilaian (contoh: hanya melakukan satu commit kemudian dikumpulkan).
 3. Ubah **Penjelasan Teknis** pada bagian bawah readme.md ini dengan menjelaskan bagaimana cara anda:
-   - Instalasi Framework, Koneksi basis data 
+   - Instalasi Framework
+    1. download framework Codeigniter versi 3
+    2. Letakkan hasil download CoddeIgniter dalam xampp->htdocs
+   - Koneksi basis data 
+    1. Membuat basis data di MySQL
+    2. Ubah database.php di dalam config yang berada di applications pada Codeigniter
+    3. Memanggil database dengan mysqli_connection
    - Melakukan validasi pada client-side
+    1 . clien dapat mengkonfirmasi komentar akan dipost dalam web atau tidak
    - Melakukan AJAX (mulai dari pengguna melakukan klik pada tombol LAPOR! sampai laporan/komentar terkirim).
+ - kami tidak menggunakan ajax
 4. Pull request dari repository anda ke repository ini dengan 
 format **NIM** - **Nama Lengkap**. **Waktu terkahir proses pull request adalah 4 hari setelah 
 ujian akhir semester (UAS)**
